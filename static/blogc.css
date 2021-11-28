@@ -41,7 +41,7 @@ h1 {
 }
 
 .header{
-	background-image:url(pictures\blogjpg.jpg);
+	/* background-image:url(pictures\blogjpg.jpg); */
 	height:200px;
 }
 

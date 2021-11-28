@@ -1,6 +1,6 @@
 # this is a simple API to show the data of artist
 
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 import os
@@ -51,19 +51,21 @@ def home_page():
 # add artist details
 @app.route('/artists', methods=['POST'])
 def add_artist():
-  name = request.form['name']
-  art_style = request.form['art_style']
-  location = request.form['location']
-  age =int(request.form['age'])
-  experience = int(request.form['experience'])
+  # name = request.form['name']
+  # art_style = request.form['art_style']
+  # location = request.form['location']
+  # age =int(request.form['age'])
+  # experience = int(request.form['experience'])
+  #
+  # new_artist = artist(name, art_style, location, age, experience)
+  #
+  # db.session.add(new_artist)
+  # db.session.commit()
 
-  new_artist = artist(name, art_style, location, age, experience)
+  # return jsonify(request.form)
+  print(request.get_json())
+  return request.get_json()
 
-  db.session.add(new_artist)
-  db.session.commit()
-
-  return jsonify(request.form)
- 
 
 # Get All artist
 @app.route('/artists', methods=['GET'])

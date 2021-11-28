@@ -5,6 +5,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Crafty Girls' rel='stylesheet'/>
 	<link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'/>
 	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='blogc.css') }}">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='qa_js.js') }}"></script>
 </head>
 <body>
 
@@ -23,13 +25,13 @@ You are interested in handwork, crafts,technology or you have nothing to do ,the
 
 <br>
 <br>
-<form action='/artists' method= "POST" >
+<form>
 <input type="text" name="name" placeholder="name" required ></br>
 <input type="text" name="art_style" placeholder="art_style" required ></br>
 <input type="text" name ="location" placeholder="location" required></br>
 <input type="text" name ="experience" placeholder="experience" required></br>
 <input type="text" name="age" placeholder="age" required>
-<input type="submit" value="submit"/>
+<input type="submit" value="submit" onclick="artist();"/>
 <input type="reset" value="reset"/>
 </form>
 </body>
