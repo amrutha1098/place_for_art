@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>	 flyoverthings 	</title>
+	<link href='https://fonts.googleapis.com/css?family=Crafty Girls' rel='stylesheet'/>
+	<link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'/>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='blogc.css') }}">
+</head>
+<body>
+
+
+<div class="header">
+<h1><span>FLYOVERTHINGS<span></h1>
+<img class="iclass" alt=" " src="{{ url_for('static',filename='photo.jpg')}}">
+</div>
+
+<div class = "section">
+<p class ="paragraph"><h2>!!!   Welcome to Flyover Things   !!! </h2>
+You are interested in handwork, crafts,technology or you have nothing to do ,then you have found the right place you really need.Here we are excited to share interesting things like DIY crafts ,technology, Simple like hacks and many things which you would be excited about.
+ </p>
+ <p class="quote">"FoR aLL cReaTive MinDs in tHIs CRazY woRld"</p>
+
+
+<br>
+<br>
+<form action='/artists' method= "POST" >
+<input type="text" name="name" placeholder="name" required ></br>
+<input type="text" name="art_style" placeholder="art_style" required ></br>
+<input type="text" name ="location" placeholder="location" required></br>
+<input type="text" name ="experience" placeholder="experience" required></br>
+<input type="text" name="age" placeholder="age" required>
+<input type="submit" value="submit"/>
+<input type="reset" value="reset"/>
+</form>
+</body>
+ <html>
