@@ -51,20 +51,21 @@ def home_page():
 # add artist details
 @app.route('/artists', methods=['POST'])
 def add_artist():
-  # name = request.form['name']
-  # art_style = request.form['art_style']
-  # location = request.form['location']
-  # age =int(request.form['age'])
-  # experience = int(request.form['experience'])
-  #
-  # new_artist = artist(name, art_style, location, age, experience)
-  #
-  # db.session.add(new_artist)
-  # db.session.commit()
+  data = request.get_json()[0]
+  print(data)
+  name = data['name']
+  art_style = data['art_style']
+  location = data['location']
+  age =int(data['age'])
+  experience = int(data['experience'])
 
-  # return jsonify(request.form)
-  print(request.get_json())
-  return request.get_json()
+  new_artist = artist(name, art_style, location, age, experience)
+
+  db.session.add(new_artist)
+  db.session.commit()
+
+  print(data)
+  return data
 
 
 # Get All artist
